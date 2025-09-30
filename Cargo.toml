@@ -1,0 +1,19 @@
+[package]
+name = "rusthonian-chrono"
+version = "0.1.0"
+edition = "2021"
+description = "Complete Python bindings for Rust's chrono crate"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Rusthonian/Rusthonian"
+keywords = ["datetime", "timezone", "chrono", "python", "bindings"]
+categories = ["date-and-time", "api-bindings"]
+
+[lib]
+name = "rusthonian_chrono"
+crate-type = ["rlib"]
+
+[dependencies]
+pyo3 = { version = "0.22", features = ["extension-module", "chrono"] }
+chrono = { version = "0.4", features = ["serde", "clock", "std"] }
+
+[dev-dependencies]
